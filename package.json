@@ -1,9 +1,10 @@
 {
-  "name": "tailwiind-course",
+  "name": "tailwind-course",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css --watch"
+    "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css --watch",
+    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.min.css --minify"
   },
   "keywords": [],
   "author": "",
