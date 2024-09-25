@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- cdn tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                custom: '#0a0a',
+              }
+            }
+          }
+        }
+      </script>
+    <style type="text/tailwindcss">
+        @layer components{
+            .btn{
+                @apply bg-custom px-6 py-3 rounded hover:animate-bounce text-white;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-3xl text-red-600">hello world</h1>
+    <button class="btn">hover me</button>
+  </body>
+</html>
