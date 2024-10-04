@@ -1,6 +1,6 @@
-/*
-! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
-*/
+/* @config "../../tailwind.js"; */
+
+/* ! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -446,6 +446,10 @@ video {
   display: none;
 }
 
+body {
+  font-family: "sans-serif";
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -599,6 +603,16 @@ video {
   }
 }
 
+.btn {
+  /* @apply bg-red-600 py-3 px-6 rounded !important; */
+  /* @apply custom-btn !important; */
+}
+
+.navbar-custom {
+  background: #dc2626;
+  width: 24rem;
+}
+
 .flex {
   display: flex;
 }
@@ -619,6 +633,20 @@ video {
   justify-content: center;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -630,4 +658,59 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+/* 
+  @import
+  @config
+  @tailwind
+
+*/
+
+.custom-btn {
+  background: blue !important;
+  color: white !important;
+}
+
+.btn-hover2 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1280px) {
+  .navbar-custom {
+    background: #0f172a;
+  }
+}
+
+/* 
+  function
+  theme()  --> spacing , colors, screens 
+  screen() 
+*/
+
+.hover\:btn-hover1:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.hover\:animate-bounce:hover {
+  animation: bounce 1s infinite;
 }

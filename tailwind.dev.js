@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {},
     debugScreens: {
-      position: ["top", "right"]
+      position: ["top", "left"]
     }
   },
   // corePlugins: {preflight: false},
